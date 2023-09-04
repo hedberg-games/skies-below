@@ -1,17 +1,15 @@
-package 
+package;
+
+import flixel.FlxGame;
+
+class Main extends FlxGame
 {
-	import org.flixel.*;
-	public class Main extends FlxGame
+	public function new()
 	{
-		public function Main() {
-			var width = 320;
-			var height = 240;
-			var zoom = Math.max(Math.floor(Math.min(stage.stageWidth / width, stage.stageHeight / height)), 1);
-			
-			super(width, height, PreloaderState, zoom);
-		}
-		
-		
+		var width:Int = 320;
+		var height:Int = 240;
+
+		//Window scaling is now handled via config, rather than the application itself
+		super(width, height, PreloaderState, 60, 60, true);
 	}
-	
 }

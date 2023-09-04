@@ -12,9 +12,10 @@ When Flash was [discontinued](https://en.wikipedia.org/wiki/Adobe_Flash_Player#E
 
 ## Building It Yourself
 
-> This is provided for historical purposes only - I have not attempted to build the code since the discontinuation of Flash.
+To build Skies Below, you'll need a working installation of [Haxe](https://haxe.org/) and [HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/). If you don't already have one, I recommend following the [Getting Started instructions for HaxeFlixel](https://haxeflixel.com/documentation/getting-started/), which covers everything from [installing Haxe](https://haxe.org/download/) to [using Haxelib to install and setup Flixel](https://haxeflixel.com/documentation/install-haxeflixel/) to [setting up an IDE](https://haxeflixel.com/documentation/visual-studio-code/). 
+> The project is already configured to support building using [VS Code](https://code.visualstudio.com/) so if that's your preferred IDE, there should be minimal setup required.
 
-The Flash version of Skies Below is normally built using the [Flash Develop](https://www.flashdevelop.org/) IDE to output the necessary `.swf` file. The [Flash version of Flixel](https://flixel.org/download.html) must be manually added to the classpaths for the project, as it is not included in this repository. 
+Once you have the prerequistes, you can simply clone (or fork) this repository, and use the relevant commands to build ( `lime test` on the command line, or `Build+Debug` in VS Code.) This process should work for [most build targets supported by Flixel](https://haxeflixel.com/documentation/haxeflixel-targets/).
 
 ## Contributing
 
@@ -30,7 +31,7 @@ Created using the [Flixel](https://github.com/AdamAtomic/flixel) and [HaxeFlixel
 
 ## License
 
-You're encouraged to read and learn from the code as much as you'd like. The entire repository is covered by the highly permissive MIT license. 
+You're encouraged to read and learn from the code as much as you'd like. The entire repository is covered by the highly permissive [MIT license](/LICENSE.txt). 
 
 ## Footnotes
 

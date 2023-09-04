@@ -1,53 +1,44 @@
-package Maps 
+package maps;
+
+import flash.display.BitmapData;
+import openfl.utils.Assets;
+
+class WorldHub extends MapBase
 {
-	public class WorldHub extends MapBase
+	// The World Hub has a unique tileset
+	public function get_tileSet():BitmapData
 	{
-		
-		//Import .png here
-		[Embed(source="../../art/WorldHubTileSet.png")]
-		protected var _tileSet: Class;
-		override protected function get tileSet():Class 
-		{
-			return _tileSet;
-		}
-		//Import .csv here
-		[Embed(source="../../levels/mapCSV_World_Hub_CollisionLayer.csv", mimeType="application/octet-stream")]
-		protected var _tileLayout: Class;
-		override protected function get tileLayout():Class 
-		{
-			return _tileLayout;
-		}
-		
-		//Import .csv for doodad spawns here
-		[Embed(source="../../levels/mapCSV_World_Hub_SpawnLayer.csv", mimeType="application/octet-stream")]
-		protected var _spawnLayout: Class;
-		override protected function get spawnLayout():Class 
-		{
-			return _spawnLayout;
-		}
-		//Import .csv for collectable spawns here
-		[Embed(source="../../levels/mapCSV_World_Hub_ShinyLayer.csv", mimeType="application/octet-stream")]
-		protected var _shinyLayout: Class;
-		override protected function get shinyLayout():Class 
-		{
-			return _shinyLayout;
-		}
-		
-		//Store collision index
-		protected var _collisionIndex:int = 10;
-		override protected function get collisionIndex():int 
-		{
-			return _collisionIndex;
-		}
-		//Store Map Number
-		override public function get mapNumber():int{
-			return 1;
-		}
-		
-		public function WorldHub() {
-			super();
-		}
-		
+		return Assets.getBitmapData("assets/art/WorldHubTileSet.png");
 	}
 
+	public function get_tileLayout():String
+	{
+		return Assets.getText("assets/levels/Hub_Collision.csv");
+	}
+
+	public function get_spawnLayout():String
+	{
+		return Assets.getText("assets/levels/Hub_Spawn.csv");
+	}
+
+	public function get_shinyLayout():String
+	{
+		return Assets.getText("assets/levels/Hub_Shiny.csv");
+	}
+
+	// The WorldHub tileset has only 1 row of background tiles
+	public function get_collisionIndex()
+	{
+		return 10;
+	}
+
+	public function get_mapNumber()
+	{
+		return 1;
+	}
+
+	public function new()
+	{
+		super();
+	}
 }
