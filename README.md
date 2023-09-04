@@ -12,7 +12,9 @@ When Flash was [discontinued](https://en.wikipedia.org/wiki/Adobe_Flash_Player#E
 
 ## Building It Yourself
 
-At present, there is no code in the repository, so it's not possible to build. When future commits change that, this section will be updated to reflect the appropriate process.
+> This is provided for historical purposes only - I have not attempted to build the code since the discontinuation of Flash.
+
+The Flash version of Skies Below is normally built using the [Flash Develop](https://www.flashdevelop.org/) IDE to output the necessary `.swf` file. The [Flash version of Flixel](https://flixel.org/download.html) must be manually added to the classpaths for the project, as it is not included in this repository. 
 
 ## Contributing
 
